@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import org.example.crapsgame.model.Dice;
 import org.example.crapsgame.model.Game;
+import org.example.crapsgame.view.alert.AlertBox;
 
 import java.util.ArrayList;
 
@@ -31,6 +32,20 @@ public class GameController {
         this.dice2.rollDice();
         this.dice1ImageView.setImage(this.dice1.getDiceImage());
         this.dice2ImageView.setImage(this.dice2.getDiceImage());
+    }
+
+    @FXML
+    void onAyudaButtonClick(ActionEvent event) {
+        new AlertBox().showMessage(
+                "Instruciones de juego",
+                "Si en este lanzamiento sacas un 7 u 11, ganas\n" +
+                        "automáticamente. Si sacas un 2, 3 o 12, es un \"Craps\" y pierdes. Cualquier otro número (4,\n" +
+                        "5, 6, 8, 9, 10) establece el \"punto\". Si el jugador establece \"punto\", puede seguir lanzando\n" +
+                        "con el objetivo de intentar sacar ese mismo número otra vez.",
+                "Si logras sacar el \"punto\"\n" +
+                        "antes de sacar un 7, ganas. Si sacas un 7 antes del punto, pierdes."
+        );
+
     }
 
 }
