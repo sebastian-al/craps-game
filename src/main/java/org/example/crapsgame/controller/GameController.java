@@ -7,15 +7,19 @@ import javafx.scene.image.ImageView;
 import org.example.crapsgame.model.Dice;
 import org.example.crapsgame.model.Game;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 //hola!!!!!
 public class GameController {
 
     @FXML
-    private Label pointLabel, shootLabel;
+    private Label pointLabel, shootLabel, winsLabel, lossesLabel;
+
 
     @FXML
     private ImageView dice1ImageView, dice2ImageView;
+
+    private Game game;
 
     Dice dice1, dice2;
     ArrayList<Game> games = new ArrayList<Game>();
@@ -32,5 +36,6 @@ public class GameController {
         this.dice1ImageView.setImage(this.dice1.getDiceImage());
         this.dice2ImageView.setImage(this.dice2.getDiceImage());
     }
+
 
 }
