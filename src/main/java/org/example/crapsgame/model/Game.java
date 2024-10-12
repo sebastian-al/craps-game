@@ -62,11 +62,8 @@ public class Game {
         this.point = 0;
         this.win = false;
         this.lose = false;
-
-}
-
-    public String getLosses() {
     }
+
 }
 
 
