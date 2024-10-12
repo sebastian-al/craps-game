@@ -13,10 +13,13 @@ import java.util.ArrayList;
 public class GameController {
 
     @FXML
-    private Label pointLabel, shootLabel;
+    private Label pointLabel, shootLabel, winsLabel, lossesLabel;
+
 
     @FXML
     private ImageView dice1ImageView, dice2ImageView;
+
+    private Game game;
 
     Dice dice1, dice2;
     ArrayList<Game> games = new ArrayList<Game>();
