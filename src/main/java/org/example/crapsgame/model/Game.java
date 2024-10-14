@@ -72,6 +72,7 @@ public class Game {
     public String play() {
         // Fase de "come out roll"
         shoot = rollDices();
+        shootCount++;
         System.out.println("Tirada inicial (come out roll): " + shoot);
 
         if (shoot == 7 || shoot == 11) {

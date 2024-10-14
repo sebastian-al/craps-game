@@ -10,7 +10,7 @@ public class Dice {
 
     public Dice() {
         this.value = 0;
-        this.diceImage = loadImage("dice0.png");
+        this.diceImage = loadImage("dice1.png");
     }
 
     public Image getDiceImage() {

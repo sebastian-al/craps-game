@@ -24,10 +24,8 @@ public class GameController {
 
     @FXML
     public void onHandleButtonRollTheDice(ActionEvent event) {
-        int shoot = game.rollDices();
-
-        shootLabel.setText(String.valueOf(shoot));
-
+        String result = game.play();
+        shootLabel.setText(String.valueOf(game.getShoot()));
         dice1ImageView.setImage(game.getDice1().getDiceImage());
         dice2ImageView.setImage(game.getDice2().getDiceImage());
 
@@ -41,7 +39,6 @@ public class GameController {
             shotLabel1.setText("Juegos perdidos");
             pointLabel1.setText(String.valueOf(game.getShootCount()));
         } else {
-
             pointLabel.setText("Punto: " + game.getPoint());
         }
 
